@@ -1,0 +1,128 @@
+/* 有作用域的视觉变量；布局与交互由目标组件实现。 */
+[data-neutral-ui] {
+  color-scheme: light;
+  --nw-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --nw-font-mono: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
+  --nw-nav: #f7f7f7;
+  --nw-page: #ffffff;
+  --nw-surface: #ffffff;
+  --nw-subtle: #fafafa;
+  --nw-hover: #f1f1f1;
+  --nw-text: #262626;
+  --nw-text-secondary: #595959;
+  --nw-text-muted: #737373;
+  --nw-text-disabled: rgba(0, 0, 0, .25);
+  --nw-border: #ebebed;
+  --nw-border-strong: #dedee2;
+  --nw-action: #262626;
+  --nw-action-hover: #111111;
+  --nw-action-text: #ffffff;
+  --nw-accent: #4c4cfa;
+  --nw-selection-text: var(--nw-accent);
+  --nw-selection-bg: #f6f6ff;
+  --nw-selection-border: #e1e1ff;
+  --nw-focus: #386fc0;
+  --nw-success: #26764c;
+  --nw-success-bg: #eff7f1;
+  --nw-warning: #94651d;
+  --nw-warning-bg: #fcf5e8;
+  --nw-danger: #ad403a;
+  --nw-danger-bg: #fdf0ef;
+  --nw-canvas: #f2f2f2;
+  --nw-canvas-dot: rgba(0, 0, 0, .08);
+  --nw-media: #111318;
+  --nw-media-text: rgba(255, 255, 255, .92);
+  --nw-overlay: rgba(38, 38, 38, .26);
+  --nw-chart-1: #8c77b3;
+  --nw-chart-2: #7a9582;
+  --nw-chart-3: #5b80ae;
+  --nw-chart-4: #bb8666;
+  --nw-body-size: 14px;
+  --nw-body-leading: 22px;
+  --nw-small-size: 12px;
+  --nw-small-leading: 20px;
+  --nw-card-title-size: 16px;
+  --nw-card-title-leading: 24px;
+  --nw-section-size: 18px;
+  --nw-section-leading: 28px;
+  --nw-control-height: 40px;
+  --nw-select-item-height: 36px;
+  --nw-radius-control: 10px;
+  --nw-radius-segment: 12px;
+  --nw-radius-card: 16px;
+  --nw-radius-panel: 20px;
+  --nw-radius-dialog: 24px;
+  --nw-space-1: 4px;
+  --nw-space-2: 8px;
+  --nw-space-3: 12px;
+  --nw-space-4: 16px;
+  --nw-space-5: 20px;
+  --nw-space-6: 24px;
+  --nw-space-8: 32px;
+  --nw-shadow-menu: 0 8px 24px rgba(0, 0, 0, .12);
+  --nw-shadow-dialog: 0 16px 64px rgb(31 37 50 / 13%);
+  --nw-shadow-panel: 0 2px 12px rgba(0, 0, 0, .06);
+  --nw-motion: 160ms;
+}
+
+/* 密度可在视觉根或子容器指定，不重置主题。 */
+[data-neutral-ui][data-nw-density="compact"],
+[data-neutral-ui] [data-nw-density="compact"] {
+  --nw-control-height: 32px;
+}
+
+[data-neutral-ui][data-nw-density="standard"],
+[data-neutral-ui] [data-nw-density="standard"] {
+  --nw-control-height: 40px;
+}
+
+/* 选择与主题属性和 data-neutral-ui 放在同一个根。 */
+[data-neutral-ui][data-nw-selection="neutral"] {
+  --nw-selection-text: var(--nw-text);
+  --nw-selection-bg: #eaeaec;
+  --nw-selection-border: #c6c6cb;
+}
+
+/* 只有需求包含暗色时使用；不创建独立主题状态或开关。 */
+[data-neutral-ui][data-nw-theme="dark"] {
+  color-scheme: dark;
+  --nw-nav: #151923;
+  --nw-page: #070a12;
+  --nw-surface: #151923;
+  --nw-subtle: #1b202c;
+  --nw-hover: #252b38;
+  --nw-text: rgba(255, 255, 255, .88);
+  --nw-text-secondary: rgba(255, 255, 255, .65);
+  --nw-text-muted: rgba(255, 255, 255, .60);
+  --nw-text-disabled: rgba(255, 255, 255, .28);
+  --nw-border: rgba(255, 255, 255, .12);
+  --nw-border-strong: rgba(255, 255, 255, .20);
+  --nw-action: #eeeeee;
+  --nw-action-hover: #ffffff;
+  --nw-action-text: #151923;
+  --nw-accent: #9292ff;
+  --nw-selection-bg: #262642;
+  --nw-selection-border: #69699b;
+  --nw-focus: #8ab4f8;
+  --nw-success: #86c89e;
+  --nw-success-bg: #18301f;
+  --nw-warning: #e6bd77;
+  --nw-warning-bg: #2c2115;
+  --nw-danger: #f2a39e;
+  --nw-danger-bg: #3a1b22;
+  --nw-canvas: #090c13;
+  --nw-canvas-dot: rgba(255, 255, 255, .08);
+  --nw-overlay: rgba(0, 0, 0, .62);
+  --nw-shadow-menu: 0 8px 24px rgba(0, 0, 0, .42);
+  --nw-shadow-dialog: 0 16px 64px rgba(0, 0, 0, .42);
+  --nw-shadow-panel: 0 2px 12px rgba(0, 0, 0, .28);
+}
+
+[data-neutral-ui][data-nw-theme="dark"][data-nw-selection="neutral"] {
+  --nw-selection-bg: #2b303d;
+  --nw-selection-border: #697180;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-neutral-ui] { --nw-motion: 0ms; }
+}

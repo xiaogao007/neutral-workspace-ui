@@ -1,0 +1,4 @@
+interface:
+  display_name: "中性工作台 UI 风格"
+  short_description: "跨项目复用灰白工作台、深灰主操作、克制强调与分级圆角的统一界面风格"
+  default_prompt: "使用 $neutral-workspace-ui，为这个产品实现统一的中性工作台界面，按任务选择布局与密度。"
